@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Soundroid</string>
+    <string name="spin_license_prompt">License type</string>
+    <string name="spin_visibility_prompt">Visibility</string>
+    <string name="spin_types_prompt">Type</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="76dip"
+	android:padding="0dip">
+
+	<ImageView android:id="@+id/track_image_plays"
+		android:layout_width="16dip" android:layout_height="16dip"
+		android:layout_gravity="center_vertical"
+		android:src="@drawable/control_play" />
+
+	<TextView android:id="@+id/track_plays"
+		android:layout_marginLeft="6dip" android:layout_width="64dip"
+		android:layout_height="fill_parent" android:layout_toRightOf="@id/track_image_plays"
+		android:layout_above="@+id/track_title" android:textAppearance="?android:attr/textAppearanceSmall"
+		android:gravity="top" />
+
+	<ImageView android:id="@+id/track_image_downloads"
+		android:layout_width="16dip" android:layout_height="16dip"
+		android:layout_marginLeft="6dip" android:layout_gravity="center_vertical"
+android:src="@drawable/bullet_arrow_bottom"
+		android:layout_toRightOf="@id/track_plays" />
+
+	<TextView android:id="@+id/track_downloads"
+		android:layout_marginLeft="0dip" android:layout_width="64dip"
+		android:layout_height="fill_parent" android:layout_toRightOf="@id/track_image_downloads"
+		android:layout_above="@id/track_title" android:textAppearance="?android:attr/textAppearanceSmall"
+		android:gravity="top" />
+
+	<TextView android:id="@+id/track_sharing"
+		android:layout_marginLeft="6dip" android:layout_width="48dip"
+		android:layout_height="fill_parent" android:layout_toRightOf="@id/track_downloads"
+
+
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:gravity="top" />
+
+	<ImageView android:id="@+id/track_playing_now"
+		android:layout_width="16dip" android:layout_height="16dip"
+		android:layout_marginLeft="16dip" android:layout_gravity="center_vertical"
+
+		android:layout_toRightOf="@id/track_sharing" />
+
+
+	<TextView android:id="@id/track_title"
+		android:layout_marginLeft="6dip" android:layout_width="fill_parent"
+		android:layout_height="26dip" android:layout_alignTop="@+id/track_artwork"
+		android:scrollHorizontally="true" android:ellipsize="marquee"
+		android:layout_toRightOf="@id/track_artwork" android:textAppearance="?android:attr/textAppearanceMedium"
+		android:gravity="bottom" />
+
+	<TextView android:id="@+id/track_username"
+		android:layout_width="fill_parent" android:layout_height="26dip"
+
+		android:layout_below="@id/track_title" android:layout_alignLeft="@id/track_title"
+		android:layout_alignParentBottom="true" android:gravity="top" />
+
+	<ImageView android:id="@id/track_artwork"
+		android:layout_width="56dip" android:layout_height="56dip"
+		android:layout_gravity="center_vertical" android:layout_below="@id/track_image_plays"
+		 />
+
+		<ImageView android:id="@+id/throbber"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+		android:src="@drawable/ic_popup_sync_1"
+		android:visibility="gone" />
+
+		<TextView android:id="@+id/track_hide" android:visibility="gone" android:layout_width="10dip" android:layout_height="10dip"/>
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.siahmsoft.soundroid.sdk7"
+      android:versionCode="2010050107"
+      android:versionName="2010-05-01">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+	<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="7"  android:maxSdkVersion="7"/>
+<!--android:maxSdkVersion="4"-->
+	<supports-screens largeScreens="true" normalScreens="true" smallScreens="true" />
+
+    <application
+    	android:icon="@drawable/classic_robot_sh"
+    	android:label="@string/app_name"
+    	android:name=".Soundroid">
+
+		<provider
+            android:name=".provider.oauth.OauthProvider"
+            android:authorities="com.siahmsoft.soundroid.provider.oauth.OauthProvider" />
+
+        <provider
+        	android:name=".provider.tracks.TracksProvider"
+            android:authorities="com.siahmsoft.soundroid.provider.track.TrackProvider" />
+
+    	<activity
+    		android:name=".LogoActivity"
+    		android:label="@string/app_name">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.MAIN" />
+				<category
+					android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action
+				 	android:name="android.intent.action.VIEW" />
+                <category
+                	android:name="android.intent.category.DEFAULT" />
+                <category
+                	android:name="android.intent.category.BROWSABLE" />
+                <data
+                	android:scheme="soundroid-app"/>
+			</intent-filter>
+           <intent-filter>
+                <action
+                	android:name="android.intent.action.VIEW" />
+                <category
+                	android:name="android.intent.category.DEFAULT" />
+                <data
+                	android:mimeType="vnd.android.cursor.item/vnd.com.siahmsoft.provider.oauths" />
+            </intent-filter>
+		</activity>
+
+		<activity android:name=".MainActivity" android:label="@string/app_name"/>
+
+		<activity android:name=".BrowserView" android:excludeFromRecents="true" />
+
+		 <activity  android:name=".MusicListActivity" android:label="@string/app_name" />
+
+        <activity  android:name=".ImageListActivity" android:label="@string/app_name" />
+
+		<activity android:name=".MeActivity" android:label="@string/app_name">
+
+<!--		<activity android:name=".MeActivity" android:label="@string/app_name"-->
+<!--		android:theme="@android:style/Theme.Light">-->
+<!--			<intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <data android:mimeType="vnd.android.cursor.item/vnd.com.siahmsoft.provider.tracks" />-->
+<!--            </intent-filter>-->
+		</activity>
+
+		<activity android:name=".SearchTracksActivity" android:label="@string/app_name"/>
+
+		<activity android:name=".DropBoxActivity" android:label="@string/app_name"/>
+
+		<activity android:name=".PlayerActivity" android:label="@string/app_name" />
+
+		<activity android:name=".FavoritesActivity" android:label="@string/app_name" />
+
+		<activity android:name=".ShareTrackActivity" android:label="@string/app_name"/>
+
+<!--android:theme="@android:style/Theme.Light"-->
+		<activity android:name=".TrackEditorActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor"
+            android:configChanges="keyboardHidden|orientation"
+        >
+            <!-- This filter says that we can view or edit the data of a single note -->
+            <intent-filter android:label="edit">
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+<!--                <action android:name="com.siahmsoft.soundroid.Track.action.EDIT_NOTE" />-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.siahmsoft.provider.tracks" />
+            </intent-filter>
+
+            <!-- This filter says that we can create a new note inside
+                 of a directory of notes. -->
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.com.siahmsoft.provider.tracks" />
+            </intent-filter>
+        </activity>
+
+
+<activity
+android:name=".EditPreferences"
+android:label="@string/app_name">
+</activity>
+
+		<service android:name=".services.MediaPlayerService" />
+		<service android:name=".services.UploadService" />
+
+    </application>
+
+</manifest>

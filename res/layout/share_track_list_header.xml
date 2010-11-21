@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:gravity="center_vertical">
+
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/basic_buttons">
+
+
+			<ImageButton android:id="@+id/addMailButton"
+				android:layout_height="wrap_content" android:layout_width="80sp"
+				android:src="@drawable/paperclip" />
+		</LinearLayout>
+
+
+
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/basic_buttons"
+			android:paddingLeft="160dip">
+			<ImageButton android:id="@+id/shareTrackButton"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:src="@drawable/bullhorn" />
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>
+
+
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:orientation="horizontal"-->
+<!--	android:layout_width="fill_parent"-->
+<!--	android:layout_height="fill_parent"-->
+<!--	 android:paddingLeft="8dp"-->
+<!--         android:paddingRight="8dp">-->
+<!---->
+<!--<ImageButton 	android:id="@+id/addMailButton"-->
+<!--				android:onClick="sendQuery"-->
+<!--				android:layout_width="wrap_content"-->
+<!--				android:layout_height="wrap_content"/>-->
+<!---->
+<!--				<ImageButton 	android:id="@+id/shareTrackButton"-->
+<!--				android:onClick="sendQuery"-->
+<!--				android:layout_width="wrap_content"-->
+<!--				android:layout_height="wrap_content"/>-->
+<!--</LinearLayout>-->

@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	 android:paddingLeft="8dp"
+         android:paddingRight="8dp">
+
+
+	<LinearLayout 	android:id="@+id/contenedorBuscador"
+					android:orientation="horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" >
+
+	<EditText	android:id="@+id/searchText"
+				android:layout_width="225dip"
+				android:lines="1"
+				android:scrollHorizontally="true"
+				android:layout_height="fill_parent"/>
+
+	<ImageButton 	android:id="@+id/searchButton"
+				android:onClick="sendQuery"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+
+<!--	<ImageButton 	android:id="@+id/moreTracksButton"-->
+<!--				android:onClick="getMoreResults"-->
+<!--				android:layout_width="wrap_content"-->
+<!--				android:layout_height="wrap_content"/>-->
+
+	</LinearLayout>
+
+
+	<ListView 	android:id="@android:id/list"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				 android:layout_weight="1"
+               android:drawSelectorOnTop="false"/>
+
+<!--<TextView id="@id/android:empty"-->
+<!--               android:layout_width="fill_parent"-->
+<!--               android:layout_height="fill_parent"-->
+<!--               android:text="No data"/>-->
+</LinearLayout>

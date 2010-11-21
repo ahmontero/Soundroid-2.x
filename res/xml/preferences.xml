@@ -1,0 +1,6 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<CheckBoxPreference android:key="buttonUnauth"
+		android:title="Unauthorize application" android:summary="Push to unauthorize application" />
+	<CheckBoxPreference android:key="buttonDeleteCache"
+		android:title="Delete cache" android:summary="Delete the cache" />
+</PreferenceScreen>
